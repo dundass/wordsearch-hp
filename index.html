@@ -30,6 +30,42 @@
             font-family: "twinkl-buttons" !important;
         }
 
+        .font-button .path1:before {
+            color: #bf0a2a !important;
+        }
+
+        .font-button.inverted .path1:before {
+            color: white !important;
+        }
+
+        .font-button.inverted .path2:before,
+        .font-button.inverted .path3:before,
+        .font-button.inverted .path4:before,
+        .font-button.inverted .path5:before {
+            color: #bf0a2a !important;
+        }
+
+        .jodal-title, .theme-colour {
+            color: #bf0a2a !important;
+        }
+
+        .text-button {
+            background-color: #bf0a2a !important;
+        }
+
+        .go-navigation-bar:not(.minimal) .theme-background-dark {
+            background-color: #bf0a2a !important;
+        }
+
+        .theme-stroke {
+            stroke: #bf0a2a !important;
+        }
+
+        .interactive-large .title-subtext {
+            font-size: 52px !important;
+        }
+
+
     </style>
     <script src="wordsearch-hp-1-jquery-1.12.4.js"></script>
     <script src="wordsearch-hp-2-vue.js"></script>
@@ -50,14 +86,15 @@
     <div class="main-screen" style="background-color: rgba(255,255,255,0.45)"></div>
 
     <div class="main-screen title-screen no-select" v-show="stage === 'title'">
-        <span class="title-text">{{ title }}</span>
-        <div class="title-subtext explore text-white" style="top: 33%">{{ subtitle }}</div>
+        <span class="title-text" style="color: #bf0a2a">{{ title }}</span>
+        <div class="title-subtext filled explore theme-colour" style="top: 33%; font-weight: 900; font-size: 46px">{{ subtitle }}</div>
         <div class="main-screen backgrounded no-events" style="width: 30%; left: 9%; right: auto; top: 5%" :style="{ backgroundImage: 'url(' + manifest.characters.src + ')' }"></div>
-        <div class="main-screen backgrounded foreground no-events" style="width: 35%; left: auto; right: 4%; transform: scaleX(-1)" :style="{ backgroundImage: 'url(' + manifest.hedwig.src + ')' }"></div>
+        <div class="main-screen backgrounded foreground no-events" style="width: 35%; left: auto; right: 1%; transform: scaleX(-1)" :style="{ backgroundImage: 'url(' + manifest.hedwig.src + ')' }"></div>
         <div class="text-button lets-go" :class="key_stage" v-on:click="letsgo" style="bottom: 25%">{{ lets_go_text }}</div>
         <img :src="manifest.logo.src" class="title-logo" style="position: absolute; top: 0; left: auto; right: 5%; padding: 1%; width: 10%; background-color: #4eb2e5; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px">
         <div class="main-screen backgrounded cover" style="background-position: left bottom" :style="{ backgroundImage: 'url(' + manifest.banner.src + ')' }"></div>
         <div style="position: absolute; color: white; bottom: 1%; right: 10%; font-size: 10px; font-family: Roboto, Arial, Serif">Artwork by Jonny Duddle and Jim Kay copyright © Bloomsbury Publishing Plc</div>
+        <div style="position: absolute; color: white; bottom: 1%; left: 4%; font-size: 10px; font-family: Roboto, Arial, Serif">© & TM WBEI. Publishing Rights © JKR.</div>
     </div>
 
     <div class="main-screen" v-show="stage === 'instructions'">
