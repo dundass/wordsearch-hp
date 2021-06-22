@@ -1,0 +1,52 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * celestia-antiqua-mvb:
+ *   - http://typekit.com/eulas/00000000000000007735c7fc
+ *   - http://typekit.com/eulas/00000000000000007735c7fe
+ *   - http://typekit.com/eulas/00000000000000007735c801
+ *   - http://typekit.com/eulas/00000000000000007735c804
+ * celestia-antiqua-mvb-small-c:
+ *   - http://typekit.com/eulas/00000000000000003b9b44e8
+ *
+ * © 2009-2021 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2021-05-31 10:56:10 UTC"}*/
+
+@import url("wordsearch-hp-31-p.css");
+
+@font-face {
+font-family:"celestia-antiqua-mvb";
+src:url("wordsearch-hp-32-l") format("woff2"),url("wordsearch-hp-33-d") format("woff"),url("wordsearch-hp-34-a") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;
+}
+
+@font-face {
+font-family:"celestia-antiqua-mvb";
+src:url("wordsearch-hp-35-l") format("woff2"),url("wordsearch-hp-36-d") format("woff"),url("wordsearch-hp-37-a") format("opentype");
+font-display:auto;font-style:italic;font-weight:400;
+}
+
+@font-face {
+font-family:"celestia-antiqua-mvb";
+src:url("wordsearch-hp-38-l") format("woff2"),url("wordsearch-hp-39-d") format("woff"),url("wordsearch-hp-40-a") format("opentype");
+font-display:auto;font-style:normal;font-weight:600;
+}
+
+@font-face {
+font-family:"celestia-antiqua-mvb";
+src:url("wordsearch-hp-41-l") format("woff2"),url("wordsearch-hp-42-d") format("woff"),url("wordsearch-hp-43-a") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;
+}
+
+@font-face {
+font-family:"celestia-antiqua-mvb-small-c";
+src:url("wordsearch-hp-44-l") format("woff2"),url("wordsearch-hp-45-d") format("woff"),url("wordsearch-hp-46-a") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;
+}
+
+.tk-celestia-antiqua-mvb { font-family: "celestia-antiqua-mvb",serif; }
+.tk-celestia-antiqua-mvb-small-c { font-family: "celestia-antiqua-mvb-small-c",serif; }

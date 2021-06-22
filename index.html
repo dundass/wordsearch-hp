@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Go Wordsearches</title>
-    <link rel="stylesheet" href="wordsearch-hp-30-ron4fve.css">
-    <link rel="stylesheet" href="wordsearch-hp-47-twinkl-buttons.css">
-    <link rel="stylesheet" href="wordsearch-hp-48-game-ui.css">
-    <link rel="stylesheet" href="wordsearch-hp-49-create-go.css">
+    <link rel="stylesheet" href="wordsearch-hp-31-ron4fve.css">
+    <link rel="stylesheet" href="wordsearch-hp-48-twinkl-buttons.css">
+    <link rel="stylesheet" href="wordsearch-hp-49-game-ui.css">
+    <link rel="stylesheet" href="wordsearch-hp-50-create-go.css">
 <!--  TODO - remember to re add data-ignore !!  -->
     <style>
         html, body {
@@ -76,14 +76,14 @@
     <script src="wordsearch-hp-7-vue-interactives.js"></script>
     <script src="wordsearch-hp-8-wordsearch.js"></script>
     <script src="wordsearch-hp-9-wordsearch-hp.js"></script>
-    <script data-manifest src="wordsearch-hp-24-manifest-inline-script.js"></script>
-    <script src="wordsearch-hp-25-manifest-inline-script.js"></script>
+    <script data-manifest src="wordsearch-hp-25-manifest-inline-script.js"></script>
+    <script src="wordsearch-hp-26-manifest-inline-script.js"></script>
 </head>
 <body onload="init()">
 
-<div id="wrapper" class="go-interactive wrapper-cover" :class="['interactive-theme-' + theme_colour, key_stage, branding + '-branding', { 'interactive-large': !screenIsSmall }]" :style="{ backgroundImage: 'url(' + manifest.background.src + ')' }" v-on:mousemove="overspill" v-on:touchmove="overspill">
+<div id="wrapper" class="go-interactive wrapper-cover" :class="['interactive-theme-' + theme_colour, key_stage, branding + '-branding', { 'interactive-large': !screenIsSmall }]" :style="{ backgroundImage: 'url(' + (stage === 'title' || stage === 'instructions' || stage === 'multi-list' ? manifest.titleBackground.src : manifest.background.src) + ')' }" v-on:mousemove="overspill" v-on:touchmove="overspill">
 
-    <div class="main-screen" style="background-color: rgba(255,255,255,0.4)"></div>
+    <div class="main-screen" style="background-color: rgba(255,255,255,0.25)"></div>
 
     <div class="main-screen title-screen no-select" v-show="stage === 'title'">
         <span class="title-text" style="color: #bf0a2a">{{ title }}</span>
@@ -94,7 +94,7 @@
         <img :src="manifest.logo.src" class="title-logo" style="position: absolute; top: -1px; left: auto; right: 5%; width: 11%; ">
         <div class="main-screen backgrounded cover" style="background-position: left bottom" :style="{ backgroundImage: 'url(' + manifest.banner.src + ')' }"></div>
         <div style="position: absolute; color: white; bottom: 1%; left: 4%; font-size: 10px; font-family: Roboto, Arial, Serif">© & TM WBEI. Publishing Rights © JKR (s21).</div>
-        <div style="position: absolute; color: white; bottom: 1%; right: 10%; font-size: 10px; font-family: Roboto, Arial, Serif">Illustrations by Jonny Duddle © Bloomsbury Publishing Plc 2014.</div>
+        <div style="position: absolute; color: white; bottom: 1%; right: 10%; font-size: 10px; font-family: Roboto, Arial, Serif">Artwork by Jonny Duddle and Jim Kay copyright © Bloomsbury Publishing Plc</div>
     </div>
 
     <div class="main-screen" v-show="stage === 'instructions'">
@@ -162,18 +162,18 @@
                 <!--<div class="text-button" v-on:click="stage = 'choices'">Play</div>-->
             </div>
         </transition>
-        <div style="position: absolute; color: white; bottom: 1%; right: 10%; font-size: 10px; font-family: Roboto, Arial, Serif">© & TM WBEI. Publishing Rights © JKR</div>
+<!--        <div style="position: absolute; color: white; bottom: 1%; right: 10%; font-size: 10px; font-family: Roboto, Arial, Serif">© & TM WBEI. Publishing Rights © JKR</div>-->
     </div>
 
     <ingame-sidebar v-on:close="stage = 'title'" :minimal="stage === 'title' || stage === 'instructions' || stage === 'multi-list'" :has-help="false"></ingame-sidebar>
 
     <div class="go-burn-container explore">
-        <img id="go-burn" src="wordsearch-hp-28-Twinkl-Burn.svg" v-show="stage !== 'title' && stage !== 'results'">
+        <img id="go-burn" src="wordsearch-hp-29-Twinkl-Burn.svg" v-show="stage !== 'title' && stage !== 'results'">
     </div>
 
     <div id="preload-div" class="loading">
         <span style="display: inline-block; height: 100%; vertical-align: middle;"></span>
-        <img src="wordsearch-hp-29-twinkl_preloader.gif" style="vertical-align: middle; max-height: 100%">
+        <img src="wordsearch-hp-30-twinkl_preloader.gif" style="vertical-align: middle; max-height: 100%">
     </div>
 
 </div>
